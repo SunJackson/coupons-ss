@@ -1,0 +1,102 @@
+// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/cf-database?id=db_init
+
+// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
+
+{
+	"coupon": { // 集合（表名）
+		"data": [ // 数据
+			{
+				"name": "饿了么红包",
+				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/56842bd0-35d9-11eb-97b7-0dc4655d6e68.png",
+				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/572f8700-35d9-11eb-8ff1-d5dcf8779628.png",
+				"url": "",
+				"type": 1,
+				"tabId": 1,
+				"minapp": {
+					"appid": "wxece3a9a4c82f58c9",
+					"path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
+				}
+			},
+			{
+				"name": "美团外卖红包",
+				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/456367d0-35d9-11eb-97b7-0dc4655d6e68.png",
+				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/599cb670-35d9-11eb-8a36-ebb87efcf8c0.png",
+				"url": "https://runion.meituan.com/url?key=d2495acd372609cc09b6c53b39a173f2&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dd2495acd372609cc09b6c53b39a173f2%3Asunjackson123&sid=sunjackson123",
+				"type": 1,
+				"tabId": 2,
+				"minapp": {
+					"appid": "wxde8ac0a21135c07d",
+					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dd2495acd372609cc09b6c53b39a173f2%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253Dd2495acd372609cc09b6c53b39a173f2%253Asunjackson123%26sid%3Dsunjackson123&lch=cps:waimai:5:d2495acd372609cc09b6c53b39a173f2:sunjackson123&f_token=1&f_userId=1"
+				}
+			},
+			{
+				"name": "美团生鲜红包",
+				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/456367d0-35d9-11eb-97b7-0dc4655d6e68.png",
+				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/c53faf80-35da-11eb-bd01-97bc1429a9ff.jpg",
+				"url": "https://runion.meituan.com/url?key=fd7b36ed0793a0fd639ffbaefe8adb78&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2F652c4b9d8a2425a98ca5%2F92207%2Findex.html%3Fappkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%3Asunjiackson&sid=sunjiackson",
+				"type": 1,
+				"tabId": 2,
+				"minapp": {
+					"appid": "wxde8ac0a21135c07d",
+					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253Dfd7b36ed0793a0fd639ffbaefe8adb78%253Asunjiackson%26sid%3Dsunjiackson&lch=cps:waimai:5:fd7b36ed0793a0fd639ffbaefe8adb78:sunjiackson&f_token=1&f_userId=1"
+				}
+			}
+			// ,
+			// {
+			// 	"name": "三只松鼠大礼包",
+			// 	"icon": "/static/coupon/jd.png",
+			// 	"bannerPic": "/static/coupon/sanzhisongshu.png",
+			// 	"url":"https://u.jd.com/tFDejq",
+			// 	"type": 0,
+			// 	"tabId": 3,
+			// 	"minapp": {
+			// 		"appid": "wx91d27dbf599dff74",
+			// 		"path": "pages/proxy/union/union"
+			// 	}
+			// }
+		],
+		"schema": {
+			"bsonType": "object",
+			"permission": {
+				".read": true,
+				".create": false,
+				".update": false,
+				".delete": false
+			}
+		}
+	},
+	"tab": { // 集合（表名）
+		"data": [ // 数据
+			{
+				"icon": "/static/all.png",
+				"text": "全部",
+				"tabId": 0
+			},
+			{
+				"icon": "/static/ele.png",
+				"text": "饿了么",
+				"tabId": 1
+			},
+			{
+				"icon": "/static/meituan.png",
+				"text": "美团",
+				"tabId": 2
+			}
+			// ,
+			// {
+			// 	"icon": "/static/jd.png",
+			// 	"text": "京东",
+			// 	"tabId": 3
+			// }
+		],
+		"schema": {
+			"bsonType": "object",
+			"permission": {
+				".read": true,
+				".create": false,
+				".update": false,
+				".delete": false
+			}
+		}
+	}
+}
