@@ -6,54 +6,58 @@
 	"coupon": { // 集合（表名）
 		"data": [ // 数据
 			{
-				"name": "饿了么红包",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/56842bd0-35d9-11eb-97b7-0dc4655d6e68.png",
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/572f8700-35d9-11eb-8ff1-d5dcf8779628.png",
-				"url": "",
-				"type": 1,
-				"tabId": 1,
-				"minapp": {
-					"appid": "wxece3a9a4c82f58c9",
-					"path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
-				}
+			    "bannerPic": "/static/coupon/ele_banner.png",
+			    "icon": "/static/coupon/ele.png",
+			    "minapp": {
+			        "appid": "wxece3a9a4c82f58c9",
+			        "path": "ele-recommend-price/pages/guest/index?inviterId=70bee0b1"
+			    },
+			    "name": "饿了么红包",
+			    "tabId": 1,
+			    "type": "每日领",
+			    "url": "https://h5.ele.me/ant/qrcode?open_type=miniapp&url_id=35&inviterId=70bee0b1",
+			    "desc": "饿了么APP大额优惠券，每天都可以领哦！"
 			},
 			{
-				"name": "美团外卖红包",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/456367d0-35d9-11eb-97b7-0dc4655d6e68.png",
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/599cb670-35d9-11eb-8a36-ebb87efcf8c0.png",
-				"url": "https://runion.meituan.com/url?key=d2495acd372609cc09b6c53b39a173f2&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dd2495acd372609cc09b6c53b39a173f2%3Asunjackson123&sid=sunjackson123",
-				"type": 1,
-				"tabId": 2,
-				"minapp": {
-					"appid": "wxde8ac0a21135c07d",
-					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dd2495acd372609cc09b6c53b39a173f2%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253Dd2495acd372609cc09b6c53b39a173f2%253Asunjackson123%26sid%3Dsunjackson123&lch=cps:waimai:5:d2495acd372609cc09b6c53b39a173f2:sunjackson123&f_token=1&f_userId=1"
-				}
+			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/a0512780-3dff-11eb-bc56-c9cea619f663.jpg",
+			    "icon": "/static/coupon/meituan.png",
+			    "minapp": {
+			        "appid": "wx2c348cf579062e56",
+			        "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2It4Fp8SyjX4vMx8up8kOVW0xCPwjoXU7XGcP4Lq1dkR5hoILQ-YCsQHahjErsyVtz5yd8LnmfrBsh9EKQv_PZ-URN2vgnWarzJYx-1l9mOnk"
+			    },
+			    "name": "美团外卖红包",
+			    "tabId": 2,
+			    "type": "每日领",
+			    "url": "",
+			    "desc": "美团外卖APP大额优惠券，每天都可以领哦！"
 			},
 			{
-				"name": "美团生鲜红包",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/456367d0-35d9-11eb-97b7-0dc4655d6e68.png",
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/c53faf80-35da-11eb-bd01-97bc1429a9ff.jpg",
-				"url": "https://runion.meituan.com/url?key=fd7b36ed0793a0fd639ffbaefe8adb78&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2F652c4b9d8a2425a98ca5%2F92207%2Findex.html%3Fappkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%3Asunjiackson&sid=sunjiackson",
-				"type": 1,
-				"tabId": 2,
-				"minapp": {
-					"appid": "wxde8ac0a21135c07d",
-					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253Dfd7b36ed0793a0fd639ffbaefe8adb78%253Asunjiackson%26sid%3Dsunjiackson&lch=cps:waimai:5:fd7b36ed0793a0fd639ffbaefe8adb78:sunjiackson&f_token=1&f_userId=1"
-				}
+			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/c53faf80-35da-11eb-bd01-97bc1429a9ff.jpg",
+			    "icon": "/static/coupon/meituan.png",
+			    "minapp": {
+			        "appid": "wxde8ac0a21135c07d",
+			        "path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253Dfd7b36ed0793a0fd639ffbaefe8adb78%253Asunjiackson%26sid%3Dsunjiackson&lch=cps:waimai:5:fd7b36ed0793a0fd639ffbaefe8adb78:sunjiackson&f_token=1&f_userId=1"
+			    },
+			    "name": "美团生鲜红包",
+			    "tabId": 2,
+			    "type": "每日领",
+			    "url": "https://runion.meituan.com/url?key=fd7b36ed0793a0fd639ffbaefe8adb78&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2F652c4b9d8a2425a98ca5%2F92207%2Findex.html%3Fappkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%3Asunjiackson&sid=sunjiackson",
+			    "desc": "美团APP生鲜大额优惠券，每天都可以领哦！"
 			}
-			// ,
-			// {
-			// 	"name": "三只松鼠大礼包",
-			// 	"icon": "/static/coupon/jd.png",
-			// 	"bannerPic": "/static/coupon/sanzhisongshu.png",
-			// 	"url":"https://u.jd.com/tFDejq",
-			// 	"type": 0,
-			// 	"tabId": 3,
-			// 	"minapp": {
-			// 		"appid": "wx91d27dbf599dff74",
-			// 		"path": "pages/proxy/union/union"
-			// 	}
-			// }
+			 ,
+			{
+			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/06911770-3e06-11eb-bd01-97bc1429a9ff.jpg",
+			    "icon": "/static/coupon/jd.png",
+			    "minapp": {
+			        "appid": "wxca1fe42a16552094",
+			        "path": "pages/events/money_treasure/aggre/index?_i_a=468958&a=undefined&_u_n=%E4%BA%AC%E4%B8%9C%E7%94%A8%E6%88%B7&_s_p=77AF07479631602E04A1876E43B1ACF6&activeId=468958&_m_h=https%253A%252F%252Fimg11.360buyimg.com%252Fjdphoto%252Fs120x120_jfs%252Ft1%252F82031%252F9%252F5133%252F19337%252F5d36bcadE9cdb240c%252Fccc58f73b721ec2d.png"
+			    },
+			    "name": "京喜一分购",
+			    "tabId": 3,
+			    "type": "新人抢",
+			    "url": "",
+			    "desc": "京东APP新人注册送礼，一分钱抢购商品！"
+			}
 		],
 		"schema": {
 			"bsonType": "object",
@@ -82,12 +86,12 @@
 				"text": "美团",
 				"tabId": 2
 			}
-			// ,
-			// {
-			// 	"icon": "/static/jd.png",
-			// 	"text": "京东",
-			// 	"tabId": 3
-			// }
+			,
+			{
+				"icon": "/static/jd.png",
+				"text": "京东",
+				"tabId": 3
+			}
 		],
 		"schema": {
 			"bsonType": "object",
