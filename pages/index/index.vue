@@ -1,9 +1,11 @@
 <template>
 	<view class="container">
+		<!-- #ifdef MP-WEIXIN -->
 		<add-tip :tip="tip" :duration="duration"/>
 		<view class="content"  @click="onSubscribe()">
 				<dragball :x=300 :y=400 image="../../static/ding.png" ></dragball>
 		</view>
+		<!-- #endif -->
 		<v-tabs v-model="current" :tabs="tabs" @change="changeTab" class="tab"></v-tabs>
 		<view class="coupon" ref="coupon">
 			<view class="item" v-for="(v, i) in couponList" @click="toCoupon(i)" :key="i">
@@ -46,11 +48,11 @@ export default {
 	        },
 	onLoad(e) {
 		this.getHome()
-		this.get_openid()
 		//#ifdef H5
 		let tabId = this.$route.query.tabId ? parseInt(this.$route.query.tabId) : 0
 		//#endif
 		//#ifdef MP-WEIXIN
+		this.getOpenId()
 		let tabId = e.tabId ? parseInt(e.tabId) : 0
 		//#endif
 		for(let i in this.tabs){
@@ -58,7 +60,11 @@ export default {
 				this.current = parseInt(i)
 			}
 		}
-		this.changeTab(this.current)
+		this.changeTab(this.current),
+		wx.showShareMenu({
+		  withShareTicket: true,
+		  menus: ['shareAppMessage', 'shareTimeline']
+		})
 	},
 	onShareAppMessage(res) {
 		var messages = [{
@@ -91,75 +97,132 @@ export default {
 		}];
 		return messages[Math.floor(Math.random()*messages.length)];
 	},
+	onShareTimeline() {
+		var messages = [{
+			title: '美团饿了么大额红包，每日可领！',
+		},{
+			title: '吃了这么多年外卖，你知道这个秘密吗？',
+		},{
+			title: '这样点外卖，一年省下一个亿',
+		},{
+			title: '点外卖前先领券，吃霸王餐',
+		},{
+			title: '美团饿了么内部优惠券，手慢无',
+		},{
+			title: '点外卖不用优惠券，你就out了',
+		},{
+			title: '外卖不为人知的秘密，点这解密',
+		},{
+			title: '震惊！小伙点外卖竟然花了1分钱',
+		},{
+			title: '从这点外卖，你也可以吃霸王餐',
+		}];
+		return messages[Math.floor(Math.random()*messages.length)]
+	},
 	methods: {
-		get_openid() {
-			uni.login({
-				success: function(res) {
-					if (res.code) {
-						uni.getUserInfo({
-							success: function(res)  {
-								console.log('存在code');
-							}
-						});
-
-						uni.request({
-						    url: getApp().globalData.api.openid,
-							data:{
-								jsCode: res.code
-							},
-						    success: (res) => {
-								console.log(res.data);
-						        getApp().globalData.openid = res.data.data.openid;
-									
-						    }
-						});	
-					} else {
-						console.log('获取用户登录态失败！' + res.errMsg);
-					}
-				}
-			});
-		},
-		onSubscribe() {
-			let lessonTmplId = 'hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI';
-			var data = {
-					data: '外卖领券提醒, 快来领优惠券啦！',
-					templateId: lessonTmplId,
-					openid: getApp().globalData.openid,
-					  };
-			console.log(data)
-			uni.showLoading({
-			  title: '订阅中...',
-			});
-			// 调用微信 API 申请发送订阅消息
-			wx.requestSubscribeMessage({
-				// 传入订阅消息的模板id，模板 id 可在小程序管理后台申请
-				tmplIds: [lessonTmplId],
-				success(res) {
-				  // 申请订阅成功
-				  if (res.errMsg === 'requestSubscribeMessage:ok') {
-					uni.request({
-					  url: getApp().globalData.api.subscribe,
-					  data: data,
-					  success: (res) => {
-						  wx.showToast({
-							title: '订阅完成',
-							icon: 'success',
-							duration: 2000,
-						  });
-						},
-					  fail(res) {
+		onSubscribe: function(){
+			let templateId = 'hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI';
+			let openid = getApp().globalData.openid;
+			console.log('订阅开始')
+			uni.requestSubscribeMessage({
+			  tmplIds: [templateId],
+			  success (res) {
+				 console.log(res)
+				 if (res[templateId] == 'reject') {
+					 uni.showToast({
+						icon: 'none',
+						title: '您拒绝了我明天就没提醒了哦',
+						duration: 3000
+					  });
+					 return;
+				 }
+				 if (res[templateId] == 'ban') {
+					 uni.showToast({
+						icon: 'none',
+						title: '请移步到设置打开订阅功能',
+						duration: 3000
+					 });
+					return;
+				 } 
+				 uni.showLoading({
+				   title: '订阅中...',
+				 });
+				 setTimeout(function () {
+				     uni.hideLoading();
+				 }, 5000);
+				 // 活动开始提醒 模板
+				 const data = {
+						data: '外卖领券提醒, 快来领优惠券啦！',
+						templateId: templateId,
+						openid: openid,
+						  };
+				 
+				 console.log(data)
+				 uni.request({
+				   url: getApp().globalData.subscribe,
+				   data: data,
+				   success: (res) => {
+					  console.log(res);
+					  wx.showToast({
+						title: '订阅完成',
+						icon: 'sucess',
+						duration: 2000,
+					  });
+					},
+				   fail(res) {
 						console.log(res)
 						wx.showToast({
 						  title: '订阅失败',
-						  icon: 'error',
+						  image: '../../static/error.png',
 						  duration: 2000,
 						});
-					  }
+				   }
+				 });
+			  },
+			  fail (res) {
+				console.log(res)			  
+			  }
+			})
+		},
+		getOpenId() {
+			try {
+			    const openid = uni.getStorageSync('openid');
+			    if (openid) {
+					console.log('获取缓存openid');
+					getApp().globalData.openid = openid
+			    }else{
+					console.log('本地未获取到openid');
+					uni.login({
+						success: function(res) {
+							if (res.code) {
+								uni.getUserInfo({
+									success: function(res)  {
+										console.log('存在code');
+									}
+								});
+								uni.request({
+								    url: getApp().globalData.api.openid,
+									data:{
+										jsCode: res.code
+									},
+								    success: (res) => {
+										console.log(res.data);
+								        getApp().globalData.openid = res.data.data.openid;
+										uni.setStorage({
+											key:"openid",
+											data: openid
+										});
+								    }
+								});	
+							} else {
+								console.log('获取用户登录态失败！' + res.errMsg);
+							}
+						}
 					});
-				  }
-				},
-				
-			});
+				}
+			} catch (e) {
+			    console.log('获取openid失败');
+			}
 			
 		},
 		changeTab(index) {

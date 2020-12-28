@@ -1,5 +1,5 @@
 {
-    "name" : "惠吃会喝",
+    "name" : "�ݳԻ��",
     "appid" : "__UNI__C0FA532",
     "description" : "",
     "versionName" : "1.0.2",
@@ -52,7 +52,9 @@
         "appid" : "wx9472d5ad54e879ed",
         "setting" : {
             "urlCheck" : true,
-            "minified" : true
+            "minified" : true,
+            "postcss" : true,
+            "es6" : true
         },
         "permission" : {}
     },

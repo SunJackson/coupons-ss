@@ -1,106 +1,102 @@
-// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/cf-database?id=db_init
-
-// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
-
 {
-	"coupon": { // 集合（表名）
-		"data": [ // 数据
-			{
-			    "bannerPic": "/static/coupon/ele_banner.png",
-			    "icon": "/static/coupon/ele.png",
-			    "minapp": {
-			        "appid": "wxece3a9a4c82f58c9",
-			        "path": "ele-recommend-price/pages/guest/index?inviterId=70bee0b1"
-			    },
-			    "name": "饿了么红包",
-			    "tabId": 1,
-			    "type": "每日领",
-			    "url": "https://h5.ele.me/ant/qrcode?open_type=miniapp&url_id=35&inviterId=70bee0b1",
-			    "desc": "饿了么APP大额优惠券，每天都可以领哦！"
-			},
-			{
-			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/a0512780-3dff-11eb-bc56-c9cea619f663.jpg",
-			    "icon": "/static/coupon/meituan.png",
-			    "minapp": {
-			        "appid": "wx2c348cf579062e56",
-			        "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2It4Fp8SyjX4vMx8up8kOVW0xCPwjoXU7XGcP4Lq1dkR5hoILQ-YCsQHahjErsyVtz5yd8LnmfrBsh9EKQv_PZ-URN2vgnWarzJYx-1l9mOnk"
-			    },
-			    "name": "美团外卖红包",
-			    "tabId": 2,
-			    "type": "每日领",
-			    "url": "",
-			    "desc": "美团外卖APP大额优惠券，每天都可以领哦！"
-			},
-			{
-			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/c53faf80-35da-11eb-bd01-97bc1429a9ff.jpg",
-			    "icon": "/static/coupon/meituan.png",
-			    "minapp": {
-			        "appid": "wxde8ac0a21135c07d",
-			        "path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253Dfd7b36ed0793a0fd639ffbaefe8adb78%253Asunjiackson%26sid%3Dsunjiackson&lch=cps:waimai:5:fd7b36ed0793a0fd639ffbaefe8adb78:sunjiackson&f_token=1&f_userId=1"
-			    },
-			    "name": "美团生鲜红包",
-			    "tabId": 2,
-			    "type": "每日领",
-			    "url": "https://runion.meituan.com/url?key=fd7b36ed0793a0fd639ffbaefe8adb78&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2F652c4b9d8a2425a98ca5%2F92207%2Findex.html%3Fappkey%3Dfd7b36ed0793a0fd639ffbaefe8adb78%3Asunjiackson&sid=sunjiackson",
-			    "desc": "美团APP生鲜大额优惠券，每天都可以领哦！"
-			}
-			 ,
-			{
-			    "bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/06911770-3e06-11eb-bd01-97bc1429a9ff.jpg",
-			    "icon": "/static/coupon/jd.png",
-			    "minapp": {
-			        "appid": "wxca1fe42a16552094",
-			        "path": "pages/events/money_treasure/aggre/index?_i_a=468958&a=undefined&_u_n=%E4%BA%AC%E4%B8%9C%E7%94%A8%E6%88%B7&_s_p=77AF07479631602E04A1876E43B1ACF6&activeId=468958&_m_h=https%253A%252F%252Fimg11.360buyimg.com%252Fjdphoto%252Fs120x120_jfs%252Ft1%252F82031%252F9%252F5133%252F19337%252F5d36bcadE9cdb240c%252Fccc58f73b721ec2d.png"
-			    },
-			    "name": "京喜一分购",
-			    "tabId": 3,
-			    "type": "新人抢",
-			    "url": "",
-			    "desc": "京东APP新人注册送礼，一分钱抢购商品！"
-			}
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".read": true,
-				".create": false,
-				".update": false,
-				".delete": false
-			}
-		}
-	},
-	"tab": { // 集合（表名）
-		"data": [ // 数据
-			{
-				"icon": "/static/all.png",
-				"text": "全部",
-				"tabId": 0
-			},
-			{
-				"icon": "/static/ele.png",
-				"text": "饿了么",
-				"tabId": 1
-			},
-			{
-				"icon": "/static/meituan.png",
-				"text": "美团",
-				"tabId": 2
-			}
-			,
-			{
-				"icon": "/static/jd.png",
-				"text": "京东",
-				"tabId": 3
-			}
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".read": true,
-				".create": false,
-				".update": false,
-				".delete": false
-			}
-		}
-	}
+    "coupon": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "5fe62b3eee98e30001cb59d0"
+                },
+                "bannerPic": "/static/coupon/meituan_banner.png",
+                "icon": "/static/coupon/meituan.png",
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D591ec05930c57331c1212b936e6785c1%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253D591ec05930c57331c1212b936e6785c1%253A000001%26sid%3D000001&lch=cps:waimai:5:591ec05930c57331c1212b936e6785c1:000001&f_token=1&f_userId=1"
+                },
+                "name": "美团外卖红包",
+                "tabId": 2,
+                "type": 1,
+                "url": "https://runion.meituan.com/url?key=cd23768d09c339d1641b2738df39aa67&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dcd23768d09c339d1641b2738df39aa67%3Ajuhe&sid=juhe",
+                "sort": 100
+            },
+            {
+                "_id": {
+                    "$oid": "5fe62b3eee98e30001cb59cf"
+                },
+                "bannerPic": "/static/coupon/ele_banner.png",
+                "icon": "/static/coupon/ele.png",
+                "minapp": {
+                    "appid": "wxece3a9a4c82f58c9",
+                    "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
+                },
+                "name": "饿了么红包",
+                "tabId": 1,
+                "type": 1,
+                "url": "https://s.click.ele.me/frZOjvu",
+                "sort": 99
+            },
+            {
+                "_id": {
+                    "$oid": "5fe62b3eee98e30001cb59d1"
+                },
+                "bannerPic": "/static/coupon/sanzhisongshu.png",
+                "icon": "/static/coupon/jd.png",
+                "minapp": {
+                    "appid": "wx91d27dbf599dff74",
+                    "path": "pages/proxy/union/union"
+                },
+                "name": "三只松鼠大礼包",
+                "tabId": 3,
+                "type": 0,
+                "url": "https://u.jd.com/tFDejq",
+                "sort": 110
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "permission": {
+                ".create": false,
+                ".delete": false,
+                ".read": true,
+                ".update": false
+            }
+        }
+    },
+    "messages": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "5fe63c00646351000153d6a8"
+                },
+                "touser": "o8Pqo5Ac9_ntJ7cOdhYVcF5QaAVg",
+                "page": "pages/index/index",
+                "data": "外卖领券提醒, 快来领优惠券啦！",
+                "templateId": "hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI",
+                "subscribeDate": "2020-12-26",
+                "sendDate": "2020-12-27",
+                "send": true
+            },
+            {
+                "_id": {
+                    "$oid": "5fe8a6c9fb0f85000120f7ee"
+                },
+                "touser": "o8Pqo5B3v9GtB3lCx0EujzSUs-v4",
+                "page": "pages/index/index",
+                "data": "外卖领券提醒, 快来领优惠券啦！",
+                "templateId": "hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI",
+                "subscribeDate": "2020-12-28",
+                "sendDate": "2020-12-27",
+                "send": true
+            }
+        ]
+    },
+    "tab": {
+        "schema": {
+            "bsonType": "object",
+            "permission": {
+                ".create": false,
+                ".delete": false,
+                ".read": true,
+                ".update": false
+            }
+        }
+    }
 }

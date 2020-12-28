@@ -1,7 +1,14 @@
+### 更新日志 12.28
+
+- 添加首页排序功能
+- 修复订阅功能无法更改发送状态
+- 增加缓存openid功能
+- 添加个人中心
+
 ### 更新日志 12.22
 
-新增订阅功能
-新增右上角提醒收藏
+- 新增订阅功能
+- 新增右上角提醒收藏
 
 # 美团饿了吗CPS红包，别人领红包下单，你拿推广佣金
 <img src="https://raw.githubusercontent.com/zwpro/coupons/master/static/demo.png" width="300"/>

@@ -1,11 +1,45 @@
 {
-	"pages": [{
-		"path": "pages/index/index"
-	}],
+	"pages": [
+		{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "惠吃会喝"
+		}
+		},
+		{
+		    "path" : "pages/home/home",
+		    "style": {
+		    	"navigationBarTitleText": "个人中心"
+		    }
+		}
+	],
+	// #ifdef  MP-WEIXIN
+	"tabBar": {
+	        "borderStyle": "black",
+	        "backgroundColor": "white",
+	        "color": "#333333",    
+			"fontSize" : "24upx", 
+	        "selectedColor": "#f4c242",
+	        "list": [{
+	                "pagePath": "pages/index/index",
+	                "text": "领券", 
+					"iconPath": "static/home.png",
+					"selectedIconPath": "static/home-active.png"
+					},
+				   {
+					   "pagePath": "pages/home/home",
+					   "text": "个人中心",
+					   "iconPath": "static/person.png",   
+					   "selectedIconPath": "static/person-active.png"
+				   }
+			   ]
+				   
+	},
+	// #endif
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "惠吃会喝",
-		"navigationBarBackgroundColor": "#007AFF",
+		"navigationBarBackgroundColor": "#F0AD4E",
 		"backgroundColor": "#FFFFFF",
 		"titleView": false,
 		"h5": {

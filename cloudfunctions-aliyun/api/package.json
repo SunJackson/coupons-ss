@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "response": "file:../common/response"
+    "response": "file:../common/response",
+	"utils": "file:../common/utils"
   }
 }
