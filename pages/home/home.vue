@@ -54,7 +54,7 @@
 							icon :{
 									color: '#f4c242',
 									size: '28',
-									type: 'gear'
+									type: 'checkbox'
 								},
 							title: "领券提醒",
 							type : 3,
@@ -68,6 +68,15 @@
 								},
 							title: "赞赏作者",
 							url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/4bea1360-48ee-11eb-b997-9918a5dda011.jpg",
+						},
+						{
+							icon :{
+									color: '#f4c242',
+									size: '28',
+									type: 'person'
+								},
+							title: "关注作者",
+							url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/cdc27e40-4a65-11eb-b997-9918a5dda011.jpg",
 						},
 						{
 							icon :{

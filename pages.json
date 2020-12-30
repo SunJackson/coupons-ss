@@ -7,6 +7,12 @@
 		}
 		},
 		{
+		    "path" : "pages/eatwhat/eatwhat",
+		    "style": {
+		    	"navigationBarTitleText": "吃什么"
+		    }
+		},
+		{
 		    "path" : "pages/home/home",
 		    "style": {
 		    	"navigationBarTitleText": "个人中心"
@@ -25,6 +31,12 @@
 	                "text": "领券", 
 					"iconPath": "static/home.png",
 					"selectedIconPath": "static/home-active.png"
+					},
+					{
+				   "pagePath": "pages/eatwhat/eatwhat",
+				   "text": "吃什么",
+				   "iconPath": "static/whatwedo.png",   
+				   "selectedIconPath": "static/whatwedo-active.png"
 					},
 				   {
 					   "pagePath": "pages/home/home",

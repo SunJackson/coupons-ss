@@ -1,5 +1,5 @@
 {
-    "name" : "�ݳԻ��",
+    "name" : "惠吃会喝",
     "appid" : "__UNI__C0FA532",
     "description" : "",
     "versionName" : "1.0.2",
@@ -56,7 +56,11 @@
             "postcss" : true,
             "es6" : true
         },
-        "permission" : {}
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "根据地址推荐吃什么"
+            }
+        }
     },
     "h5" : {
         "optimization" : {

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import addTip from "../../components/struggler-uniapp-add-tip/struggler-uniapp-add-tip.vue";
+import addTip from "../../components/add-tip/add-tip.vue";
 import dragball from "../../components/drag-ball/drag-ball.vue";
 export default {
 	data() {
@@ -39,7 +39,7 @@ export default {
 			couponList: [],
 			coupons: [],
 			tip:"点击「添加小程序」，下次访问更便捷",
-			duration:1,
+			duration: 5,
 		};
 	},
 	components:{
