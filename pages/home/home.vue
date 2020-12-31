@@ -9,6 +9,7 @@
 			<uni-list>
 				<uni-list-item clickable v-for="item, index in navList" :key="item.id" @click="goToLink(index)" :show-extra-icon="true" :extra-icon="item.icon" :title="item.title"/>
 			</uni-list>
+
 		</view>
 	</view>
 </template>
@@ -35,6 +36,7 @@
 		font-weight: 500;
 		text-align: left;
 	}
+
 </style>
 <script>
 	import uniIcons from '@/components/uni-icons/uni-icons.vue'
