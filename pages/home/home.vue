@@ -67,7 +67,7 @@
 									type: 'star'
 								},
 							title: "赞赏作者",
-							url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/4bea1360-48ee-11eb-b997-9918a5dda011.jpg",
+							url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/320ec300-4b05-11eb-8a36-ebb87efcf8c0.jpg",
 						},
 						{
 							icon :{
@@ -234,6 +234,7 @@
 					  path: url,
 					  success(res) {
 						// 打开成功
+						console.log('打开成功')
 					  }
 					})
 				} else if (type == 3) {

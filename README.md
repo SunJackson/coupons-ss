@@ -1,3 +1,11 @@
+### TODO
+- 修改个人中心关注公众号按钮点击跳转
+- 吃什么页面添加分享功能
+- 点击订阅页面美化提示显示
+
+### 更新日志 12.30
+- 添加吃什么页面
+
 ### 更新日志 12.28
 
 - 添加首页排序功能
@@ -10,6 +18,7 @@
 - 新增订阅功能
 - 新增右上角提醒收藏
 
+本项目基于[zwpro的外卖CPS添加功能开发](https://github.com/zwpro/coupons)，如果想要看原始代码请移步[这里](https://github.com/zwpro/coupons)
 # 美团饿了吗CPS红包，别人领红包下单，你拿推广佣金
 <img src="https://raw.githubusercontent.com/zwpro/coupons/master/static/demo.png" width="300"/>
 
