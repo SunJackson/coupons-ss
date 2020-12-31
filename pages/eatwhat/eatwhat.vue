@@ -16,6 +16,16 @@
             <view @tap="play" id="startBtn">
                 <view class="inner">{{btnText}}</view>
             </view>
+			<!-- #ifdef MP-WEIXIN -->
+			<view class="share">
+			    <button id="shareApp" open-type="share">
+					<view class="inner">分享吃什么</view>
+				</button>
+				<button id="luckyMoney" @tap="getLuckyMoney">
+					<view class="inner">去领红包</view>
+				</button>
+			</view>
+			<!-- #endif -->
             <text @tap="showRestaurant" id="showRestaurant">查看餐厅详情</text>
         </view>
         <view :class="status==='running'?'hide':''" id="footer">
@@ -96,7 +106,11 @@ export default {
 	  }
     
   },
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
+	  
+	if (res.from === 'button') {
+	    console.log("来自页面内按钮分享")
+	}
     var t = this.menu[this.menuIdx][0];
     return uni.reportAnalytics("share", {
       type: this.type,
@@ -104,7 +118,8 @@ export default {
       time: t
     }), {
       title: "神马" === this.food ? "今天吃神马？这是一个能解决你的人生一大困扰的小程序！" : "今天" + t + "吃" + this.food + "！这个小程序解决了我人生的一大困扰啊！",
-      imageUrl: "../../static/share_pic.png"
+      // imageUrl: "../../static/share_pic.png",
+	  path: 'pages/eatwhat/eatwhat'
     };
   },
   onShareTimeline: function() {
@@ -157,6 +172,11 @@ export default {
         }();
       }
     },
+	getLuckyMoney: function () {
+		wx.switchTab({
+		  url: '/pages/index/index'//实际路径要写全
+		});
+	},
     changeType: function (t) {
       var a = t.target.dataset.type;
       a !== this.type && (this.setData({
@@ -377,7 +397,7 @@ export default {
 
 #main {
     position: relative;
-    margin-top: 40%;
+    margin-top: 30%;
     text-align: center;
 }
 
@@ -399,7 +419,7 @@ export default {
 }
 
 #main.restaurants {
-    margin-top: 30%;
+    margin-top: 40%;
 }
 
 #main.restaurants .what {
@@ -503,6 +523,84 @@ export default {
     background: linear-gradient(180deg,#ff911e,#ffbb30);
     box-shadow: inset 0 1px #ffb050,0 2px 3px rgba(0,0,0,.2);
 }
+
+.share {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#shareApp {
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 40px;
+    background: rgba(0,0,0,.1);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.07),0 1px hsla(0,0%,100%,.5);
+}
+
+
+#shareApp .inner {
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
+    border-radius: 35px;
+    border: 1px solid #97d110;
+    background: linear-gradient(180deg,#19ac18,#19ac18);
+    box-shadow: inset 0 1px #97d110,0 2px 3px rgba(0,0,0,.2);
+}
+
+#shareApp:hover .inner {
+    background: linear-gradient(180deg,#137e11,#137e11);
+    box-shadow: inset 0 1px #97d110,0 2px 3px rgba(0,0,0,.2);
+}
+
+#shareApp:active .inner {
+    background: linear-gradient(180deg,#19ac18,#19ac18);
+    box-shadow: inset 0 1px #97d110,0 2px 3px rgba(0,0,0,.2);
+}
+
+
+#luckyMoney {
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 40px;
+    background: rgba(0,0,0,.1);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.07),0 1px hsla(0,0%,100%,.5);
+}
+
+
+#luckyMoney .inner {
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
+    border-radius: 35px;
+    border: 1px solid #e88e1d;
+    background: linear-gradient(180deg,#f0713f,#f0713f);
+    box-shadow: inset 0 1px #ffd17c,0 2px 3px rgba(0,0,0,.2);
+}
+
+#luckyMoney:hover .inner {
+    background: linear-gradient(180deg,#c78f41,#c78f41);
+    box-shadow: inset 0 1px #ffe696,0 2px 3px rgba(0,0,0,.2);
+}
+
+#luckyMoney:active .inner {
+    background: linear-gradient(180deg,#f0713f,#f0713f);
+    box-shadow: inset 0 1px #ffb050,0 2px 3px rgba(0,0,0,.2);
+}
+
 
 #tempContainer {
     position: absolute;

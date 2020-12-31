@@ -4,6 +4,7 @@
 			<view class="head-picture">	<open-data type="userAvatarUrl"></open-data></view>
 			<view class="nickname"><open-data type="userNickName"></open-data> </view>
 		</view>
+
 		<view class="content">
 			<uni-list>
 				<uni-list-item clickable v-for="item, index in navList" :key="item.id" @click="goToLink(index)" :show-extra-icon="true" :extra-icon="item.icon" :title="item.title"/>
@@ -73,20 +74,11 @@
 							icon :{
 									color: '#f4c242',
 									size: '28',
-									type: 'person'
-								},
-							title: "关注作者",
-							url: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-17414whos6vp2f68cb/cdc27e40-4a65-11eb-b997-9918a5dda011.jpg",
-						},
-						{
-							icon :{
-									color: '#f4c242',
-									size: '28',
 									type: 'more'
 								},
 							title: "领拼多多优惠", 
 							appid: "wx5beb3dc0c3575180",
-							url: "/pages/link/link",
+							url: "pages/index/index",
 							type: 2,  
 						},				
 				]		

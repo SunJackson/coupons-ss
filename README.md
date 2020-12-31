@@ -1,7 +1,8 @@
-### TODO
+### 更新日志 12.31
 - 修改个人中心关注公众号按钮点击跳转
 - 吃什么页面添加分享功能
-- 点击订阅页面美化提示显示
+
+![功能展示](https://raw.githubusercontent.com/sunjackson/coupons/master/examples/7057e518bd7fbb71c3e182bf208aeeda.gif)
 
 ### 更新日志 12.30
 - 添加吃什么页面

@@ -3,11 +3,16 @@
 		<!-- #ifdef MP-WEIXIN -->
 		<add-tip :tip="tip" :duration="duration"/>
 		<view class="content"  @click="onSubscribe()">
-				<dragball :x=300 :y=400 image="../../static/ding.png" ></dragball>
+				<dragball :x=300 :y=400 image="../../static/dytx.png" ></dragball>
 		</view>
 		<!-- #endif -->
 		<v-tabs v-model="current" :tabs="tabs" @change="changeTab" class="tab"></v-tabs>
 		<view class="coupon" ref="coupon">
+			<!-- #ifdef MP-WEIXIN -->
+			<view>
+			<official-account></official-account>
+			</view>
+			<!-- #endif -->
 			<view class="item" v-for="(v, i) in couponList" @click="toCoupon(i)" :key="i">
 				<view class="top">
 					<view class="left">
