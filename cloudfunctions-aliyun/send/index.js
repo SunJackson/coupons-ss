@@ -4,16 +4,16 @@ const utils = require('utils');
 function getFormatDate(ms) {
     let date = new Date();
 	date.setTime(date.getTime() + ms);
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const strDate = date.getDate();
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let strDate = date.getDate();
     if (month >= 1 && month <= 9) {
         month = '0' + month;
     }
     if (strDate >= 0 && strDate <= 9) {
         strDate = '0' + strDate;
     }
-    const currentdate = year + '-' + month + '-' + strDate;
+    let currentdate = year + '-' + month + '-' + strDate;
     return currentdate;
 };
 
