@@ -31,11 +31,11 @@
 
 源码为uniapp项目，需下载hbuilder导入项目打包，可编译成h5或小程序(跳转地址为小程序路径)
 
-[使用uniapp开发小程序](https://mp.weixin.qq.com/s/svrd4CSaArtP44m_8JNzNg)
-[从零搭建外卖CPS平台-胶囊提示+排序](https://mp.weixin.qq.com/s/3Hu0CL4viSPp3i0PpQjz4g)
-[从零搭建外卖CPS平台-添加个人中心](https://mp.weixin.qq.com/s/GfEkF-Klx-PuNP5L-88TZw)
-[从零搭建外卖CPS平台-添加订阅功能](https://mp.weixin.qq.com/s/kfKSuhHQTo6ZVvwTTgisfw)
-[从零搭建外卖CPS平台-添加吃什么](https://mp.weixin.qq.com/s/vFYNpbNb8wV_r4MraAwZpw)
+- [使用uniapp开发小程序](https://mp.weixin.qq.com/s/svrd4CSaArtP44m_8JNzNg)
+- [从零搭建外卖CPS平台-胶囊提示+排序](https://mp.weixin.qq.com/s/3Hu0CL4viSPp3i0PpQjz4g)
+- [从零搭建外卖CPS平台-添加个人中心](https://mp.weixin.qq.com/s/GfEkF-Klx-PuNP5L-88TZw)
+- [从零搭建外卖CPS平台-添加订阅功能](https://mp.weixin.qq.com/s/kfKSuhHQTo6ZVvwTTgisfw)
+- [从零搭建外卖CPS平台-添加吃什么](https://mp.weixin.qq.com/s/vFYNpbNb8wV_r4MraAwZpw)
 
 
 ### 常见问题
