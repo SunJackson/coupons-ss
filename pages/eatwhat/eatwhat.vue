@@ -118,7 +118,7 @@ export default {
       time: t
     }), {
       title: "神马" === this.food ? "今天吃神马？这是一个能解决你的人生一大困扰的小程序！" : "今天" + t + "吃" + this.food + "！这个小程序解决了我人生的一大困扰啊！",
-      // imageUrl: "../../static/share_pic.png",
+      imageUrl: "../../static/share_pic.png",
 	  path: 'pages/eatwhat/eatwhat'
     };
   },
@@ -397,7 +397,7 @@ export default {
 
 #main {
     position: relative;
-    margin-top: 30%;
+    margin-top: 20%;
     text-align: center;
 }
 

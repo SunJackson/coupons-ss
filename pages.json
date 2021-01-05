@@ -28,7 +28,7 @@
 	        "selectedColor": "#f4c242",
 	        "list": [{
 	                "pagePath": "pages/index/index",
-	                "text": "领券", 
+	                "text": "优惠吃", 
 					"iconPath": "static/home.png",
 					"selectedIconPath": "static/home-active.png"
 					},

@@ -4,6 +4,17 @@
 			<view class="head-picture">	<open-data type="userAvatarUrl"></open-data></view>
 			<view class="nickname"><open-data type="userNickName"></open-data> </view>
 		</view>
+		<view class="section">
+		  <view class="section-top">
+		    <text class="section-text">有趣小程序</text>
+		  </view>
+		  <view class="section-bottom">
+		    <view v-for="(item, index) in otherMiniPrograms" :key="index" class="section-bottom-item" @tap="toOtherMiniPrograms" :data-index="index">
+		      <image :src="item.icon" mode="aspectFit"></image>
+		      <text>{{item.name}}</text>
+		    </view>
+		  </view>
+		</view>
 
 		<view class="others">
 			<view class="item">
@@ -28,13 +39,6 @@
 				</button>
 			</view>
 			<view class="item">
-				<image class="icon" src="/static/pdd.png"></image>
-				<button class="content share" @click="goToMini('pdd')">
-					<view>领优惠券</view>
-					<image class="right" src="/static/right_h.png"></image>
-				</button>
-			</view>
-			<view class="item">
 				<image class="icon" src="/static/user_kefu.png"></image>
 				<button class="content share" open-type="contact">
 					<view>在线客服</view>
@@ -52,8 +56,14 @@
 export default {
 	data() {
 		return {
-			userInfo: ''
-		};
+			userInfo: '',
+			otherMiniPrograms: [{
+			icon: "../../static/waimai.png",
+			name: "购物领券",
+			appId: "wx5beb3dc0c3575180",
+			path: "/pages/index/index"
+			  }],
+			};
 	},
 	onLoad() {
 		this.userInfo = getApp().globalData.userInfo
@@ -81,17 +91,12 @@ export default {
 				}
 			});
 		},
-		goToMini: function(mini){
-			if (mini === 'pdd'){
-				wx.navigateToMiniProgram({
-				  appId: "wx5beb3dc0c3575180",
-				  path: "pages/index/index",
-				  success(res) {
-					// 打开成功
-					console.log('打开成功')
-				  }
-				})
-			}
+		toOtherMiniPrograms: function (e) {
+		  const index = e.currentTarget.dataset.index;
+		  uni.navigateToMiniProgram({
+		    appId: this.otherMiniPrograms[index].appId,
+		    path: this.otherMiniPrograms[index].path
+		  });
 		},
 		onSubscribe: function(){
 			getApp().onSubscribe();
@@ -132,6 +137,43 @@ page {
 	text-align: left;
 }
 
+.section {
+  width: 100vw;
+  background-color: white;
+  margin-top: 20rpx;
+}
+.section-top {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+}
+.section-text {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.section-bottom {
+  width: calc(100vw - 60rpx);
+  padding: 30rpx;
+  display: flex;
+}
+.section-bottom-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-bottom-item image {
+  width: 10vw;
+  height: 10vw;
+}
+.section-bottom-item text {
+  color: #707070;
+  font-size: 24rpx;
+  text-align: center;
+}
 .others {
 	margin: 20rpx 0;
 	background: #fff;

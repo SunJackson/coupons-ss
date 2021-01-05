@@ -184,6 +184,7 @@ export default {
 page {
 	background-color: #f8f8f8;
 }
+         
 
 .container {
 	font-size: 14px;
@@ -258,7 +259,7 @@ page {
 			}
 
 			.bottom {
-				height: auto;
+				height: 200rpx;
 				width: 100%;
 				image {
 					display: block;
