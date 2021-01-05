@@ -33,10 +33,15 @@
 
 源码为uniapp项目，需下载hbuilder导入项目打包，可编译成h5或小程序(跳转地址为小程序路径)
 
-[参考文档](https://mp.weixin.qq.com/s/svrd4CSaArtP44m_8JNzNg)
+[使用uniapp开发小程序](https://mp.weixin.qq.com/s/svrd4CSaArtP44m_8JNzNg)
+[从零搭建外卖CPS平台-胶囊提示+排序](https://mp.weixin.qq.com/s/3Hu0CL4viSPp3i0PpQjz4g)
+[从零搭建外卖CPS平台-添加个人中心](https://mp.weixin.qq.com/s/GfEkF-Klx-PuNP5L-88TZw)
+[从零搭建外卖CPS平台-添加订阅功能](https://mp.weixin.qq.com/s/kfKSuhHQTo6ZVvwTTgisfw)
+[从零搭建外卖CPS平台-添加吃什么](https://mp.weixin.qq.com/s/vFYNpbNb8wV_r4MraAwZpw)
 
 
 ### 常见问题
+### 
 1. [如何获取美团饿了吗的推广链接](https://mp.weixin.qq.com/s/9EdkRBYL_O_OetzBT2rldw)
 
 美团联盟：https://union.meituan.com/
@@ -56,9 +61,18 @@ minapp: {
 }
 ```
 
+2. 如何使用云函数
+上传云函数前修改cloudfunctions-aliyun/common/utils/index.js
+```
+exports.APPID = 'wx9472d5ad54e879ed';  //这里是我的appid，需要改成你自己的
+exports.SECREAT = '7fefd*************65778a';   //密钥也要改成你自己的
+```
+[一些关于订阅功能的常见问题](https://mp.weixin.qq.com/s/0RGdoj9iN92gKSWHK8HoVw)
+
+
 已上线案例：
 
 <img src="[](https://github.com/SunJackson/coupons-ss/raw/dev/examples)/惠吃会喝.png" width="200"/>
 
 
-如有线上案例或疑问，请提issue
+如有线上案例或疑问，请提issue，或者关注微信公众号【猿起缘落】
