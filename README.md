@@ -24,9 +24,7 @@
 
 # 美团饿了吗CPS红包，别人领红包下单，你拿推广佣金
 
-<img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/index.png" width="300"/>
-<img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/eatwhat.png" width="300"/>
-<img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/home.png" width="300"/>
+<img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/index.png" width="300"/><img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/eatwhat.png" width="300"/><img src="https://github.com/SunJackson/coupons-ss/raw/dev/examples/home.png" width="300"/>
 
 
 ### 使用方法
